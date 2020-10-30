@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 public class TimeEntryController {
-    @Autowired
-    private TimeEntryRepository timeEntriesRepo;
+    private TimeEntryRepository timeEntriesRepo=new InMemoryTimeEntryRepository();
     public TimeEntryController(TimeEntryRepository timeEntryRepository) {
         timeEntriesRepo=timeEntryRepository;
     }
